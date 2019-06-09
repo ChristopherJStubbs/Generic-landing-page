@@ -1,0 +1,43 @@
+// CSS RESETS:
+
+* ,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// HTML ELEMENTS SCSS
+
+html {
+    // This defines what 1 rem is.
+    // 62.5% of 16(normal browser font size) is 10px, which makes life easy.
+    font-size: 62.5%;
+
+    @include respond(big-screen) {
+        font-size: 75%;
+    }
+
+    @include respond(tablet-landscape) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tablet-portrait) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+}
+
+body {
+    padding: 1.5rem;
+    box-sizing: border-box;
+
+    @include respond(tablet-portrait) {
+        padding: 0;
+    }
+
+}
